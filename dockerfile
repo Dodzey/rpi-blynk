@@ -1,14 +1,15 @@
-FROM arm32v7/openjdk:9
+FROM arm32v7/openjdk:latest
 
 MAINTAINER Mathias Renner <mathias@hypriot.com>
 
 ENV BLYNK_SERVER_VERSION 0.38.3 
+ENV BLYNK_JAVA_VER_SUFFIX -java8
 
 RUN apt-get update \
 && apt-get install -y curl 
 
 RUN mkdir -p /blynk
-RUN curl -L https://github.com/blynkkk/blynk-server/releases/download/v${BLYNK_SERVER_VERSION}/server-${BLYNK_SERVER_VERSION}.jar > /blynk/server.jar
+RUN curl -L https://github.com/blynkkk/blynk-server/releases/download/v${BLYNK_SERVER_VERSION}/server-${BLYNK_SERVER_VERSION}${BLYNK_JAVA_VER_SUFFIX}.jar > /blynk/server.jar
 # Create data folder. To persist data, map a volume to /data
 
 RUN mkdir -p /data
