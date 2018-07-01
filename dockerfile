@@ -1,4 +1,4 @@
-FROM arm32v7/openjdk
+FROM arm32v7/openjdk:9
 
 MAINTAINER Mathias Renner <mathias@hypriot.com>
 
