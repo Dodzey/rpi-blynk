@@ -2,7 +2,7 @@ FROM hypriot/rpi-java
 
 MAINTAINER Mathias Renner <mathias@hypriot.com>
 
-ENV BLYNK_SERVER_VERSION 0.24.6 
+ENV BLYNK_SERVER_VERSION 0.38.3 
 
 RUN apt-get update \
 && apt-get install -y curl 
