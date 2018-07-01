@@ -1,4 +1,4 @@
-FROM hypriot/rpi-java
+FROM arm32v7/openjdk
 
 MAINTAINER Mathias Renner <mathias@hypriot.com>
 
